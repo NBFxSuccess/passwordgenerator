@@ -60,26 +60,28 @@ generateBtn.addEventListener("click", generatePassword);
 
 // what happens after click
 function generatePassword() {
+
   console.log("clicked")
   var passwordField = "";
+  if (passwordField.length <= numberOfChars) {
   for (var i = 0 ;i <numberOfChars; i++) {
     console.log("test")
-    if (caps == true) {
+    if (caps == true && passwordField.length <= numberOfChars) {
     let randomCapDecimal = Math.random()*capitalLetters.length;
     let randomCapRounded = Math.floor(randomCapDecimal)
     passwordField += capitalLetters[randomCapRounded].toString();
     }
-    if (numbers == true){
+    if (numbers == true && passwordField.length <= numberOfChars){
     let randomNumberDecimal = Math.random()*justNumbers.length;
     let randomNumberRounded = Math.floor(randomNumberDecimal)
     passwordField += justNumbers[randomNumberRounded].toString();
   }
-  if (special == true) {
+  if (special == true && passwordField.length <= numberOfChars) {
     let randomSpecialDecimal = Math.random()*specialChars.length;
     let randomSpecialRounded = Math.floor(randomSpecialDecimal)
     passwordField += specialChars[randomSpecialRounded].toString();
 }
-    if (lowercase == true) {
+    if (lowercase == true && passwordField.length <= numberOfChars) {
     let randomLowercaseDecimal = Math.random()*lowercaseLetters.length;
     let randomLowercaseRounded = Math.floor(randomLowercaseDecimal)
     passwordField += lowercaseLetters[randomLowercaseRounded].toString();
@@ -87,5 +89,10 @@ function generatePassword() {
   }
   console.log(passwordField);
   // writing password on screen
-  document.querySelector("#password").innerHTML = passwordField;
+  
+  // file was writing an extra var at end so I took it out
+  const passwordFixed = passwordField.slice(0, -1) 
+  document.querySelector("#password").innerHTML = passwordFixed;
+
+}
 }
