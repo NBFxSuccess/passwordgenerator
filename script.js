@@ -14,16 +14,21 @@ var numbers = false;
 function questionone() {
   numberOfChars = prompt("Please enter # of chars 8-128", "0");
   if (numberOfChars > 128 || numberOfChars < 8) {
+    alert("invalid input!");
     questionone();
   }
   
 }
 questionone();
+questions();
+function questions() {
 var questiontwo = prompt("Do you want this password to include capital letters? yes/no", "yes");
 var questionthree = prompt("Do you want this password to include special characters? yes/no", "yes");
 var questionfour = prompt("Do you want this password to include numbers? yes/no", "yes");
 var questionfive = prompt("Do you want this password to include lowercase? yes/no", "yes");
 
+
+// setting password options.
 if (questiontwo == "yes") {
   caps = true;
 }
@@ -37,8 +42,12 @@ if (questionfive == "yes") {
   lowercase = true;
 }
 
+  } // V what happens if all questions get answered no/invalid
+  if (!caps && !special && !numbers && !lowercase) {
+    alert("You need to have valid input. Must input yes to one of the options.")
+    questions();
 
-
+  }
 
 // Write password to the #password input
 function writePassword() {
