@@ -1,13 +1,14 @@
 # File Description
 
-First Portfolio Application for NW Coding Bootcamp.
+Password generator with multiple options written in JavaScript by Nickolas Ferrer
 
 ## Deployed Application link
-https://nbfxsuccess.github.io/portfolio/
+
+https://nbfxsuccess.github.io/passwordgeneratorhomework/
 
 
 ## Screenshot
-![Porfolio](/assets/img/screenshot.png "Application Screenshot")
+![Password Generator](/Assets/screenshot.png "Application Screenshot")
 
 
 ## License
