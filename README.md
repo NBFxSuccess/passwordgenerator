@@ -8,7 +8,7 @@ https://nbfxsuccess.github.io/passwordgeneratorhomework/
 
 
 ## Screenshot
-![Password Generator](/assets/screenshot.png "Application Screenshot")
+![Password Generator](/Assets/screenshot.png "Application Screenshot")
 
 
 ## License
