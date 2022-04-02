@@ -16,14 +16,16 @@ generateBtn.addEventListener("click", generatePassword);
 
 function generatePassword() {
   console.log("clicked")
+  var passwordField = "";
   for (var i = 0 ;i <numberOfChars; i++) {
     console.log("test")
     let randomDecimal = Math.random()*chars.length;
   let randomNumber = Math.floor(randomDecimal)
-  var passwordField =+ chars[randomNumber].toString;
+  passwordField += chars[randomNumber].toString();
+  
+  }
   console.log(passwordField);
   document.querySelector("#password").innerHTML = passwordField;
-  }
 
 
 
