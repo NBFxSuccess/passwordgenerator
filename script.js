@@ -22,25 +22,29 @@ function questionone() {
 questionone();
 questions();
 function questions() {
-var questiontwo = prompt("Do you want this password to include capital letters? yes/no", "yes");
-var questionthree = prompt("Do you want this password to include special characters? yes/no", "yes");
-var questionfour = prompt("Do you want this password to include numbers? yes/no", "yes");
-var questionfive = prompt("Do you want this password to include lowercase? yes/no", "yes");
 
 
-// setting password options.
-if (questiontwo == "yes") {
+
+if (confirm("Do you want this password to include capital letters?") == true) {
   caps = true;
-}
-if (questionthree == "yes") {
+} 
+
+if (confirm("Do you want this password to include special characters?") == true) {
   special = true;
-}
-if (questionfour == "yes") {
+} 
+  
+
+if (confirm("Do you want this password to include numbers?") == true) {
   numbers = true;
-}
-if (questionfive == "yes") {
+} 
+  
+
+if (confirm("Do you want this password to include lowercase letters?") == true) {
   lowercase = true;
-}
+} 
+  
+  
+
 
   } // V what happens if all questions get answered no/invalid
   if (!caps && !special && !numbers && !lowercase) {
