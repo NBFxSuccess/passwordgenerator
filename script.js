@@ -5,20 +5,23 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var passwordText = document.querySelector("#password");
+
 
   passwordText.value = password;
 
 }
 // Add event listener to generate button
-generateBtn.addEventListener("click", generatorPassword);
+generateBtn.addEventListener("click", generatePassword);
 
 function generatePassword() {
-  for (var i  = 0; i <= numberOfChars; i++) {
+  console.log("clicked")
+  for (var i =0 ;i <numberOfChars; i++) {
+    console.log("test")
     let randomDecimal = Math.random()*chars.length;
   let randomNumber = Math.floor(randomDecimal)
-  passwordField += chars[i]
-  document.querySelector("#password").value = passwordField;
+  var passwordField =+ chars[randomNumber];
+  console.log(passwordField);
+  document.querySelector("#password").innerHTML = passwordField;
  
 
 
