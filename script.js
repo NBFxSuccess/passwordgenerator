@@ -10,9 +10,8 @@ function writePassword() {
   passwordText.value = password;
 
 }
-generatePassword();
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", generatorPassword);
 
 function generatePassword() {
   for (var i  = 0; i <= numberOfChars; i++) {
