@@ -49,13 +49,12 @@ if (questionfive == "yes") {
 
   }
 
-// Write password to the #password input
-function writePassword() {
-  passwordText.value = password;
-}
-// Add event listener to generate button
+
+// listener for click
 generateBtn.addEventListener("click", generatePassword);
 
+
+// what happens after click
 function generatePassword() {
   console.log("clicked")
   var passwordField = "";
@@ -83,5 +82,6 @@ function generatePassword() {
     }
   }
   console.log(passwordField);
+  // writing password on screen
   document.querySelector("#password").innerHTML = passwordField;
 }
