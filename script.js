@@ -25,21 +25,21 @@ function questions() {
 
 
 
-if (confirm("Do you want this password to include capital letters?") == true) {
+if (confirm("Do you want this password to include capital letters?") === true) {
   caps = true;
 } 
 
-if (confirm("Do you want this password to include special characters?") == true) {
+if (confirm("Do you want this password to include special characters?") === true) {
   special = true;
 } 
   
 
-if (confirm("Do you want this password to include numbers?") == true) {
+if (confirm("Do you want this password to include numbers?") === true) {
   numbers = true;
 } 
   
 
-if (confirm("Do you want this password to include lowercase letters?") == true) {
+if (confirm("Do you want this password to include lowercase letters?") === true) {
   lowercase = true;
 } 
   
@@ -87,8 +87,12 @@ function generatePassword() {
     passwordField += lowercaseLetters[randomLowercaseRounded].toString();
     }
   }
-
-  document.querySelector("#password").innerHTML = passwordField;
+  console.log(passwordField);
+  // writing password on screen
+  
+  // file was writing an extra var at end so I took it out
+  const passwordFixed = passwordField.slice(0, -1) 
+  document.querySelector("#password").innerHTML = passwordFixed;
 
 }
 }
