@@ -88,11 +88,13 @@ function generatePassword() {
     }
   }
   console.log(passwordField);
-  // writing password on screen
+  document.querySelector("#password").innerHTML = passwordField;
   
-  // file was writing an extra var at end so I took it out
+  // file was writing an extra char at end if only 1 option selected so removed 
+  if (caps + numbers + special + lowercase > 1) {
   const passwordFixed = passwordField.slice(0, -1) 
   document.querySelector("#password").innerHTML = passwordFixed;
+  }
 
 }
 }
