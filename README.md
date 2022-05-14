@@ -2,6 +2,11 @@
 
 Password generator with multiple options written in JavaScript by Nickolas Ferrer
 
+## Technologies Used
+* CSS
+* JavaScript
+* HTML
+
 ## Deployed Application link
 
 https://nbfxsuccess.github.io/passwordgeneratorhomework/
